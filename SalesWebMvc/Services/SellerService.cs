@@ -19,5 +19,12 @@ namespace SalesWebMvc.Services
 		{
 			return _context.Seller.ToList();
 		}
+
+		public void Insert(Seller obj)
+		{
+			//Inclui o objeto enviado pelo controller no bd
+			_context.Add(obj);
+			_context.SaveChanges();
+		}
 	}
 }
