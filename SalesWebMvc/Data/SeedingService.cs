@@ -29,7 +29,7 @@ namespace SalesWebMvc.Data
 
 			Department d1 = new Department(1, "Guns");
 			Department d2 = new Department(2, "Rare Animals");
-			Department d3 = new Department(3, "Guns");
+			Department d3 = new Department(3, "Drugs");
 
 			Seller s1 = new Seller(1, "Mariana Kolberg", "marianaeltzkolberg@hotmail.com", new DateTime(1996, 10, 03), 5000.0, d3);
 			Seller s2 = new Seller(2, "Maria Green", "maria@gmail.com", new DateTime(1979, 12, 31), 3500.0, d2);
