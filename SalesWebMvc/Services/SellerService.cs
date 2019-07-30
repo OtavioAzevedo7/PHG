@@ -36,7 +36,6 @@ namespace SalesWebMvc.Services
 		{
 			var obj = _context.Seller.Find(id);
 			_context.Seller.Remove(obj);
-			//_context.Remove(obj);
 			_context.SaveChanges();
 		}
 	}
