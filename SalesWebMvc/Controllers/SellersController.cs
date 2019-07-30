@@ -44,6 +44,11 @@ namespace SalesWebMvc.Controllers
 			return RedirectToAction(nameof(Index));
 		}
 
+		/// <summary>
+		/// Método que retorna para a view o seller, se existir.
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns></returns>
 		public IActionResult Delete(int? id)
 		{
 			if (id == null)
@@ -66,6 +71,23 @@ namespace SalesWebMvc.Controllers
 		{
 			_sellerService.Remove(id);
 			return RedirectToAction(nameof(Index));
+		}
+
+		public IActionResult Details(int? id)
+		{
+			if (id == null)
+			{
+				return NotFound();
+			}
+
+			var obj = _sellerService.FindById(id.Value);
+
+			if (obj == null)
+			{
+				return NotFound();
+			}
+
+			return View(obj);
 		}
 	}
 }
