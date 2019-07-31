@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace SalesWebMvc.Models
@@ -8,8 +9,17 @@ namespace SalesWebMvc.Models
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
+		[EmailAddress]
 		public string Email { get; set; }
+		//Exibe/formata o nome desejado nas views chamadas pelo tag helper
+		[Display(Name = "Birth Date")]
+		//Exibe/formata os inputs nas views
+		[DataType(DataType.Date)]
+		[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
 		public DateTime BirthDate { get; set; }
+		[Display(Name = "Base Salary")]
+		//Formata para 2 casas decimais
+		[DisplayFormat(DataFormatString ="{0:F2}")]
 		public double BaseSalary { get; set; }
 		//Cada vendedor tem um Department
 		public Department Department { get; set; }
