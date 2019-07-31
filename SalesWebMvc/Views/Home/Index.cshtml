@@ -1,55 +1,42 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
-    <div class="carousel-inner" role="listbox">
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
         <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
+            <img src="https://cdn.vox-cdn.com/thumbor/HnaKZcEUqFLydfXqzK5mrR8yYJk=/0x0:2000x1000/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/7104451/eatersea0916_pike_place_market_shutterstock_mcarter.0.jpg" alt="1">
         </div>
+
         <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
+            <img src="http://clubedaquimica.com/wp-content/uploads/2019/05/frutas.jpg" alt="2">
         </div>
+
         <div class="item">
-            <img src="~/images/banner3.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
+            <img src="http://www.supermercadista.com.br/wp-content/uploads/2016/10/condominio.jpg" alt="2">
         </div>
+        @*<div class="item">
+            <img src="~/images/banner1.svg" alt="New York">
+        </div>*@
     </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Anterior</span>
     </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Próximo</span>
     </a>
 </div>
 

@@ -6,9 +6,9 @@
 
 <h2>Departments</h2>
 
-<table class="table">
+<table class="table table-striped table-hover">
     <thead>
-        <tr>
+        <tr class="success">
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
@@ -31,6 +31,5 @@
     </tbody>
 </table>
 <p>
-    <a asp-action="Create">Create New Department</a>
-    @*<button type="button" asp-action="Create">New Department</button>*@ 
+    <a asp-action="Create" class="btn btn-primary" >Create New Department</a>
 </p>
